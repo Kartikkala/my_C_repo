@@ -1,0 +1,6 @@
+page 129 - the ? operator {read whole chapter ater that}.
+page 156 - for loops
+chapter 7 befor page 190 - arrays
+page 199 - searching and sorting
+chapert 8 befor page 235- character arrays and strings
+page 236- reading strings from terminal
