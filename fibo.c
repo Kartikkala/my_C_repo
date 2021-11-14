@@ -7,8 +7,8 @@ void main()
     for (i=0;i<=n;)
     {
         printf("\n%d",i);  
-        m=i;    
-        i=i+x;    
-        x=m;   
+        m=i;        //storing previous value of i inside the variable m
+        i=i+x;    //updating the value of i by x
+        x=m;      //updating the value of x by previous value of i.
     }
 }
