@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main()
 {
-    system("clear");
+    system("cls");
     char a[50], b[50], c[50];
     int d;
     printf("Hello kid!!!, let's fill a form!!!!");
