@@ -19,6 +19,5 @@ int main()
         {
             printf("\t%d",c[i][j]);
         }};
-
     return 0;
 }
