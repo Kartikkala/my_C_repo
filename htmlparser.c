@@ -1,53 +1,39 @@
 #include <stdio.h>
 #include <string.h>
-int main()
+void parse(char *snippet)
 {
-    char a[100], b[100];
-    puts("Enter a HTML code: ");
-    gets(a);
-    if (a[0] == '<')
+    int a = 0, j = 0;
+    char new_snippet[strlen(snippet)];
+    for (int i = 0; i < strlen(snippet); i++)
     {
-        if (a[1] == 'h')
+        if (snippet[i] == '<')
         {
-            if (a[2] == '1' || a[2] == '2' || a[2] == '3')
-            {
-                for (int i = 4; i < strlen(a); i++)
-                {
-                    if (a[i] == '<')
-                    {
-                        goto end;
-                    }
-                    printf("%c", a[i]);
-                }
-            }
-            else if (a[2] == 'e')
-            {
-                if (a[3] == 'a')
-                {
-                    for (int i = 6; i < strlen(a); i++)
-                    {
-                        if (a[i] == '<')
-                        {
-                            goto end;
-                        }
-                        printf("%c", a[i]);
-                    }
-                }
-            }
+            a = 1;
         }
-        else if (a[1] == 't' || a[1] == 'b' || a[1] == 'i')
+        else if (snippet[i] == '>')
         {
-            for (int i = 3; i < strlen(a); i++)
+            a = 0;
+            continue;
+        }
+        if (a == 0)
+        {
+            while(j < strlen(snippet))
             {
-                if (a[i] == '<')
-                {
-                    goto end;
-                }
-                printf("%c", a[i]);
+                new_snippet[j] = snippet[i];
+                j+=1;
+                break;
             }
         }
     }
-    else{printf("This was not a valid html code snippet!");}
-end:
+    for (int j = 0; j < strlen(snippet); j++)
+    {
+        snippet[j] = new_snippet[j];
+    }
+}
+int main()
+{
+    char m[30] = "<head>Hemlo</head>";
+    parse(m);
+    printf("%s", m);
     return 0;
 }
