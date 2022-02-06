@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <C:\Users\hp\vscode\cprograms\power.c>
-void main()
+int main(void)
 {
     int x, a, p, m;
     printf("Enter a number: ");

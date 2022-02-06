@@ -7,9 +7,13 @@ then it is called null pointer. This is done so that the pointer variable may no
 
 
 #include <stdio.h>
-void main()
+int main()
 {
     int a=12;
-    int* ptr=&a;
-    printf("%d",*ptr);
+    for(int i=0;i<5;i++)
+    {
+        int *ptr=&a+i;
+        printf("\nSize of a: %llu a+%d: %d",sizeof(a),i,*ptr);
+    }
+    return 0;
 }
