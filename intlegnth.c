@@ -1,10 +1,9 @@
 int strLen(int *arr)
 {
     int m=0;
-    for(int i=0;;i=i+sizeof(int))
+    for( m=0;;m=m+1)
     {
-        m++;
-        if(arr[i]=='\0')
+        if(arr[m]=='\0')
         {
             break;
         }
