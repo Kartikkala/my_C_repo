@@ -1,5 +1,6 @@
 #include <stdio.h>
-float add(float x, float y);
+#include <stdarg.h>
+float add(int x, ...);
 float sub(float x, float y);
 float mul(float x, float y);
 float div(float x, float y);
@@ -40,11 +41,15 @@ int main()
     }
 }
 /*Addition function*/
-float add(float x, float y)
+float add(int x,...)
 {
-    float z;
-    z = x + y;
-    return z;
+    int res=1;
+    va_list arguments;
+    va_start(arguments,x);
+    for(int a=0;a<x;x++)
+    res= res+va_arg(arguments,float);
+    va_end(arguments);
+    return res;
 }
 /*Sub function*/
 float sub(float x, float y)
