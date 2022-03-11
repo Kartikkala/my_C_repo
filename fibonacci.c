@@ -12,7 +12,7 @@ int fibo(int c,int x)
         fibo(c,x-1);
     }
 }
-void main()
+int main(void)
 {
     int y,x;
     printf("\nEnter range: ");

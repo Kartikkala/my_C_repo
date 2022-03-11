@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "c:\Users\hp\vscode\cprograms\strcounter.h"
-int main()
+int main(void)
 {
     char ad[5];
 
