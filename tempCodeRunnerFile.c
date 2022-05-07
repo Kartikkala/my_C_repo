@@ -1,2 +1,1 @@
-
-}
+fopen("C://Users/hp/Desktop/new.txt","w");
