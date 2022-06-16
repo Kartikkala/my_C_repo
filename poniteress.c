@@ -8,7 +8,7 @@ int main(void)
     int number=0;
     printf("Enter an expression for addition: ");
     fgets(user_expression,50,stdin);
-        for(int i=0,j=0;i<strlen(user_expression);j++,i++)
+        for(int i=0;i<strlen(user_expression);i++)
         {
             if(user_expression[i]=='+' || i==strlen(user_expression)-1)
             {
